@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devarsons - The Colour Solution Company | Est. 1923</title>
+    <meta name="description" content="Application-based innovation in specialty colorants. Strategic preferred supplier to global petroleum, plastics, cosmetics and defense companies since 1923.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black-pure: #000000;
+    --black-primary: #0F0F1A;
+    --purple-muted: #8B7BA8;
+    --teal-muted: #5DADA6;
+    --gold-primary: #D4AF37;
+    --gold-light: #F4E4C1;
+    --pink-muted: #D4A5A5;
+    --blue-muted: #7B9CB8;
+    --white: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--black-pure) 0%, var(--black-primary) 100%);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 26, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(139, 123, 168, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 50%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.05em;
+}
+
+.logo-tagline {
+    font-size: 0.7rem;
+    color: var(--teal-muted);
+    font-style: italic;
+    letter-spacing: 0.1em;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple-muted), var(--teal-muted));
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--teal-muted);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.hero-bg-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.15;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.shape1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--purple-muted) 0%, transparent 70%);
+    top: 10%;
+    right: 10%;
+}
+
+.shape2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--teal-muted) 0%, transparent 70%);
+    bottom: 20%;
+    left: 5%;
+}
+
+.shape3 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--pink-muted) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.2) 0%, rgba(93, 173, 166, 0.2) 100%);
+    border: 2px solid var(--teal-muted);
+    border-radius: 50px;
+    color: var(--teal-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 50%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 800px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.hero-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--teal-muted);
+    max-width: 700px;
+    margin: 2rem 0 3rem;
+    padding-left: 2rem;
+    border-left: 3px solid var(--teal-muted);
+    line-height: 1.8;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1.2rem 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 100%);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(93, 173, 166, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--teal-muted);
+    color: var(--teal-muted);
+}
+
+.btn-secondary:hover {
+    background: var(--teal-muted);
+    color: var(--white);
+}
+
+/* SECTIONS */
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 50%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4rem;
+    max-width: 800px;
+}
+
+.company-description {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 900px;
+    margin-bottom: 2rem;
+}
+
+/* INDUSTRIES GRID */
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.industry-card {
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.1) 0%, rgba(93, 173, 166, 0.1) 100%);
+    border: 1px solid rgba(139, 123, 168, 0.3);
+    border-radius: 25px;
+    padding: 2.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--teal-muted);
+    box-shadow: 0 20px 60px rgba(93, 173, 166, 0.3);
+}
+
+.industry-card:hover::before {
+    opacity: 0.15;
+}
+
+.industry-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.industry-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--teal-muted);
+    position: relative;
+    z-index: 1;
+}
+
+.industry-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+}
+
+.industry-details {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(93, 173, 166, 0.3);
+}
+
+.industry-card:hover .industry-details {
+    max-height: 300px;
+}
+
+/* BUZZWORDS */
+.buzzwords-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.buzzword {
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.2) 0%, rgba(93, 173, 166, 0.2) 100%);
+    border: 1px solid rgba(93, 173, 166, 0.4);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.buzzword:hover {
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.3) 0%, rgba(93, 173, 166, 0.3) 100%);
+    border-color: var(--teal-muted);
+    transform: translateY(-3px);
+    color: var(--teal-muted);
+    box-shadow: 0 10px 30px rgba(93, 173, 166, 0.3);
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--purple-muted), var(--teal-muted), transparent);
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    width: 45%;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 55%;
+}
+
+.timeline-year {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.15) 0%, rgba(93, 173, 166, 0.15) 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(93, 173, 166, 0.3);
+}
+
+.timeline-text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+/* GLOBAL REACH */
+.global-reach {
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.1) 0%, rgba(93, 173, 166, 0.1) 100%);
+    border-radius: 30px;
+    padding: 4rem;
+    margin: 4rem 0;
+    border: 1px solid rgba(93, 173, 166, 0.3);
+}
+
+.reach-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.reach-stat {
+    text-align: center;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 1px solid rgba(93, 173, 166, 0.2);
+    transition: all 0.3s ease;
+}
+
+.reach-stat:hover {
+    border-color: var(--teal-muted);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(93, 173, 166, 0.3);
+}
+
+.reach-percentage {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.reach-region {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.reach-countries {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* PRODUCTS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.product-item {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.15) 0%, rgba(93, 173, 166, 0.15) 100%);
+    border: 1px solid rgba(93, 173, 166, 0.3);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    border-color: var(--teal-muted);
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.25) 0%, rgba(93, 173, 166, 0.25) 100%);
+    transform: translateX(5px);
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--teal-muted);
+    margin-bottom: 0.5rem;
+}
+
+.product-detail {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* CERTIFICATIONS */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cert-badge {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.2) 0%, rgba(93, 173, 166, 0.2) 100%);
+    border: 2px solid var(--teal-muted);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.cert-badge:hover {
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.3) 0%, rgba(93, 173, 166, 0.3) 100%);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(93, 173, 166, 0.4);
+}
+
+.cert-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--teal-muted);
+    margin-bottom: 0.5rem;
+}
+
+.cert-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* QUOTE BLOCKS */
+.quote-block {
+    margin: 5rem 0;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    line-height: 1.7;
+    color: var(--white);
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+}
+
+.quote-text::before {
+    content: '"';
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
+    font-size: 10rem;
+    background: linear-gradient(135deg, var(--purple-muted) 0%, var(--teal-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.15;
+    font-family: Georgia, serif;
+}
+
+.quote-author {
+    font-size: 1rem;
+    color: var(--teal-muted);
+    font-weight: 600;
+}
+
+/* CAPABILITIES */
+.capabilities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.capability-item {
+    padding: 1.5rem;
+    background: rgba(93, 173, 166, 0.1);
+    border-left: 3px solid var(--teal-muted);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.capability-item:hover {
+    background: rgba(93, 173, 166, 0.2);
+    transform: translateX(10px);
+}
+
+.capability-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--teal-muted);
+}
+
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(135deg, rgba(139, 123, 168, 0.2) 0%, rgba(93, 173, 166, 0.2) 100%);
+    border-radius: 30px;
+    padding: 5rem 4rem;
+    text-align: center;
+    margin: 6rem 0;
+    border: 1px solid rgba(93, 173, 166, 0.3);
+}
+
+.cta-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+/* FOOTER */
+footer {
+    background: var(--black-pure);
+    border-top: 1px solid rgba(93, 173, 166, 0.3);
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .container { padding: 0 2rem; }
+    .header-content { padding: 1.5rem 2rem; }
+    .timeline::before { left: 0; }
+    .timeline-item { width: 100%; margin-left: 2rem !important; }
+}
+
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero { min-height: auto; padding: 8rem 0 4rem; }
+    .hero-cta { flex-direction: column; }
+    .btn { width: 100%; }
+    .global-reach { padding: 2rem; }
+    .cta-section { padding: 3rem 2rem; }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/cab453ed-7d3e-4dfa-9012-038dbc50c1c5/2025-12-15T18-55-10-698Z-88cbe1d7-chat-image-1765824910680-0.jpg" alt="Devarsons Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">devarsons</span>
+                    <span class="logo-tagline">The Colour Solution Company</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#profile">Company Profile</a></li>
+                    <li><a href="#manufacturing">Manufacturing</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#quality">Quality & R&D</a></li>
+                    <li><a href="#ehss">EHS&S</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Group Established 1923</div>
+                <h1 class="hero-title">
+                    <span class="highlight">Application-Based</span>
+                    Innovation in
+                    <span class="highlight">Specialty Colorants</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A regulatory-compliant, customer-centric company delivering advanced dyes to global petroleum, plastics, cosmetics and defense industries.
+                </p>
+                <div class="hero-quote">
+                    "Don't find customers for your products, find products for your customers." — Seth Godin
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Request Consultation</a>
+                    <a href="#products" class="btn btn-secondary">Explore Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-subtitle">Over a century of excellence in specialty colorants</p>
+            
+            <p class="company-description">
+                Devarsons is an ISO 9001, ISO 14001 and OHSAS 18001 accredited company, developing and producing specialty colorants. The group was established in 1923 with manufacturing activity primarily based in Ahmedabad. With over 50 years of accumulated experience in Color Application, our product range is specifically designed to cater to customers in various industries such as Cosmetics, Crop Protection, Plastics, Petroleum, etc.
+            </p>
+            
+            <p class="company-description">
+                The emphasis within the organization is on developing new molecules or customizing current known molecules to meet highly specialized applications. Devarsons does not produce any one class of dye but rather an assortment of dyes with different chemistries to suit highly evolved applications.
+            </p>
+            
+            <div class="quote-block">
+                <p class="quote-text">"Whenever you see a successful business, someone once made a courageous decision."</p>
+                <p class="quote-author">— Peter F. Drucker</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">What Sets Us Apart</h2>
+            <p class="section-subtitle">Our distinctive approach to specialty colorants</p>
+            
+            <div class="buzzwords-grid">
+                <span class="buzzword">Lean Management</span>
+                <span class="buzzword">SAP Integrated</span>
+                <span class="buzzword">Colours with a Difference</span>
+                <span class="buzzword">Application Oriented</span>
+                <span class="buzzword">Debt Free</span>
+                <span class="buzzword">Chemistry Oriented</span>
+                <span class="buzzword">Responsible Sourcing</span>
+                <span class="buzzword">Strong EHS Commitment</span>
+                <span class="buzzword">Technical Assistance</span>
+                <span class="buzzword">Emphasis on Consistency</span>
+                <span class="buzzword">Backward Integrated</span>
+                <span class="buzzword">Application Development Expertise</span>
+                <span class="buzzword">Decisive & Agile</span>
+                <span class="buzzword">Customer-Centric</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Industries Served</h2>
+            <p class="section-subtitle">Delivering specialized solutions across diverse sectors</p>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <span class="industry-icon">🧪</span>
+                    <h3 class="industry-title">Cosmetics</h3>
+                    <p class="industry-description">EU Cosmetics, US FDA, Schedule Q India compliant colorants.</p>
+                    <div class="industry-details">Hair oil, kumkum, lipstick, toilet soap, eye liner, nail polish, shampoo. Compliant with heavy metal analysis and microbial count regulations.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">⚗️</span>
+                    <h3 class="industry-title">Polymers & Plastics</h3>
+                    <p class="industry-description">Master batch, PVC, engineering plastics, reprocess granules.</p>
+                    <div class="industry-details">High-performance PET, polyester fiber, EVA footwear, PU foam, monofilament yarn with consistent quality.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">🛢️</span>
+                    <h3 class="industry-title">Fuel & Lubricants</h3>
+                    <p class="industry-description">Engine oil, grease, coolant colorants.</p>
+                    <div class="industry-details">First to launch Blue Liquid Dye for kerosene in India (1992, IOCL). Superior thermal stability.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">🖨️</span>
+                    <h3 class="industry-title">Inks & Paints</h3>
+                    <p class="industry-description">Adhesive, printing ink, varnish, paint colorants.</p>
+                    <div class="industry-details">Fluorescent colorants for ink and markers with excellent lightfastness.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">🔬</span>
+                    <h3 class="industry-title">Non-Destructive Testing</h3>
+                    <p class="industry-description">Specialized dyes for NDT applications.</p>
+                    <div class="industry-details">Custom molecular development for aerospace, automotive, and industrial NDT methods.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">💊</span>
+                    <h3 class="industry-title">Medical</h3>
+                    <p class="industry-description">Pharmaceutical-grade colorants.</p>
+                    <div class="industry-details">Highly evolved applications with strict regulatory compliance.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">🧵</span>
+                    <h3 class="industry-title">Textiles</h3>
+                    <p class="industry-description">High-end VAT dyes, metal complex dyes.</p>
+                    <div class="industry-details">Superior wash and light fastness for premium textile applications.</div>
+                </div>
+                
+                <div class="industry-card">
+                    <span class="industry-icon">🌾</span>
+                    <h3 class="industry-title">Agriculture</h3>
+                    <p class="industry-description">Seeds, pesticides, fertilizer colorants.</p>
+                    <div class="industry-details">Environmentally safe formulations compliant with agricultural regulations.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Milestones</h2>
+            <p class="section-subtitle">A century of innovation and growth</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1923</div>
+                    <div class="timeline-content">
+                        <p class="timeline-text">Devarsons Group established as solution provider.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1978</div>
+                    <div class="timeline-content">
+                        <p class="timeline-text">First Export to ICI Australia</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1992</div>
+                    <div class="timeline-content">
+                        <p class="timeline-text">First Blue Liquid Dye for kerosene in India (IOCL)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-content">
+                        <p class="timeline-text">Gujarat Cleaner Production Award</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">
+                        <p class="timeline-text">SAP Business One Implementation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="global-reach">
+                <h2 class="section-title" style="text-align: center;">Global Reach</h2>
+                <p class="section-subtitle" style="text-align: center; margin: 0 auto 3rem;">Serving 50+ countries worldwide</p>
+                
+                <div class="reach-stats">
+                    <div class="reach-stat">
+                        <div class="reach-percentage">50%</div>
+                        <div class="reach-region">Americas</div>
+                        <div class="reach-countries">USA, Canada, South America, Mexico</div>
+                    </div>
+                    <div class="reach-stat">
+                        <div class="reach-percentage">40%</div>
+                        <div class="reach-region">Europe</div>
+                        <div class="reach-countries">EU, UK & Associated Countries</div>
+                    </div>
+                    <div class="reach-stat">
+                        <div class="reach-percentage">10%</div>
+                        <div class="reach-region">Asia Pacific</div>
+                        <div class="reach-countries">Far East & Other Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Our Product Lines</h2>
+            <p class="section-subtitle">Comprehensive range of specialty colorants</p>
+            
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-name">Solvent Colours</div>
+                    <div class="product-detail">Wide range for plastics and petroleum</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Oil Colours</div>
+                    <div class="product-detail">Lubricants and fuel applications</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Food Colours</div>
+                    <div class="product-detail">F.D.C.A Approved</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Cosmetics Colours</div>
+                    <div class="product-detail">EU, US FDA, Schedule Q India</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Acid, Basic & Direct</div>
+                    <div class="product-detail">Textile applications</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Metal Complex Dyes</div>
+                    <div class="product-detail">Superior fastness</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Pigments & Emulsions</div>
+                    <div class="product-detail">High-performance formulations</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Lake Colours</div>
+                    <div class="product-detail">Insoluble pigment forms</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Liquid Colorants</div>
+                    <div class="product-detail">Ready-to-use formulations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quality">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Committed to quality, safety, and environmental excellence</p>
+            
+            <div class="certifications-grid">
+                <div class="cert-badge">
+                    <div class="cert-title">ISO 9001</div>
+                    <div class="cert-subtitle">Quality Management</div>
+                </div>
+                <div class="cert-badge">
+                    <div class="cert-title">ISO 14001</div>
+                    <div class="cert-subtitle">Environmental</div>
+                </div>
+                <div class="cert-badge">
+                    <div class="cert-title">OHSAS 18001</div>
+                    <div class="cert-subtitle">Health & Safety</div>
+                </div>
+                <div class="cert-badge">
+                    <div class="cert-title">Export House</div>
+                    <div class="cert-subtitle">Govt. Recognized</div>
+                </div>
+            </div>
+            
+            <div class="quote-block">
+                <p class="quote-text">"Quality is the best business plan."</p>
+                <p class="quote-author">— John Lasseter, Disney/Pixar</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cta-section">
+                <h2 class="cta-title">Partner with Excellence</h2>
+                <p class="cta-description">
+                    Discover how our century of expertise can solve your colorant challenges.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Request Consultation</a>
+                    <a href="#products" class="btn btn-secondary">Download Brochure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/cab453ed-7d3e-4dfa-9012-038dbc50c1c5/2025-12-15T18-55-10-698Z-88cbe1d7-chat-image-1765824910680-0.jpg" alt="Devarsons Logo" style="height: 80px;">
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2025 Devarsons Industries Private Limited. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; color: var(--teal-muted);">Group Established 1923 | The Colour Solution Company</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray('.industry-card').forEach(card => {
+    gsap.from(card, {
+        scrollTrigger: { trigger: card, start: 'top 85%' },
+        y: 50, opacity: 0, duration: 0.6
+    });
+});
+
+gsap.from('.buzzword', {
+    scrollTrigger: { trigger: '.buzzwords-grid', start: 'top 75%' },
+    scale: 0, opacity: 0, stagger: 0.05, duration: 0.4, ease: 'back.out(1.7)'
+});
+
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    const header = document.querySelector('header');
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        header.style.transform = 'translateY(0)';
+    }
+    lastScroll = currentScroll;
+});
+    </script>
+</body>
+</html>
